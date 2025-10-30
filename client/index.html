@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس صوتی WebRTC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📞 تماس صوتی WebRTC</h1>
+            <p>مانند تلگرام - ارتباط مستقیم کاربران</p>
+        </header>
+
+        <div class="connection-panel" id="connectionPanel">
+            <div class="input-group">
+                <label for="roomInput">شناسه اتاق:</label>
+                <input type="text" id="roomInput" placeholder="مثلاً: room123" value="room123">
+                <button id="joinBtn">ورود به اتاق</button>
+            </div>
+            
+            <div class="users-list">
+                <h3>کاربران آنلاین:</h3>
+                <ul id="usersList"></ul>
+            </div>
+        </div>
+
+        <div class="call-panel hidden" id="callPanel">
+            <div class="call-info">
+                <div class="status" id="status">در حال اتصال...</div>
+                <div class="timer" id="timer">00:00</div>
+            </div>
+            
+            <div class="call-controls">
+                <button id="muteBtn" class="control-btn">🔇 بی‌صدا</button>
+                <button id="endCallBtn" class="control-btn end-call">📞 پایان تماس</button>
+                <button id="speakerBtn" class="control-btn">🔊 بلندگو</button>
+            </div>
+
+            <audio id="remoteAudio" autoplay></audio>
+            <audio id="localAudio" muted></audio>
+        </div>
+
+        <div class="instructions">
+            <h3>راهنمای استفاده:</h3>
+            <ol>
+                <li>شناسه اتاق یکسان را در دو دستگاه وارد کنید</li>
+                <li>دکمه "ورود به اتاق" را بزنید</li>
+                <li>پس از اتصال کاربر دیگر، تماس به صورت خودکار برقرار می‌شود</li>
+                <li>از دکمه‌های کنترل برای مدیریت تماس استفاده کنید</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
