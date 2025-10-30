@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.connection-panel, .call-panel {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#joinBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#joinBtn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.users-list {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.users-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#usersList {
+    list-style: none;
+}
+
+#usersList li {
+    padding: 10px 15px;
+    background: white;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-right: 4px solid #667eea;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.call-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.status {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    font-family: monospace;
+}
+
+.call-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 15px 20px;
+    background: #f1f3f4;
+    border: 2px solid #ddd;
+    font-size: 1.1em;
+    min-width: 80px;
+}
+
+.control-btn:hover {
+    background: #e8eaed;
+    transform: translateY(-2px);
+}
+
+.control-btn.end-call {
+    background: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.control-btn.end-call:hover {
+    background: #da190b;
+}
+
+.instructions {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    border-right: 4px solid #2196F3;
+}
+
+.instructions h3 {
+    color: #1976D2;
+    margin-bottom: 15px;
+}
+
+.instructions ol {
+    padding-right: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.connected {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.calling {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .call-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .control-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
